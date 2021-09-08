@@ -20,7 +20,8 @@
                 <p>
                     <strong>Julian Frauenholz</strong> <small>@j-frauenholz</small>
                     <br>
-                    <span id="0ec6187f-05cc-4886-84a7-b0c8f4addc6d"></span>
+                    <span class="tag is-light">26. October 2021</span>
+                    <span class="tag" id="0ec6187f-05cc-4886-84a7-b0c8f4addc6d"></span>
                 </p>
             </div>
         </div>
@@ -34,9 +35,11 @@
     var now = moment();
     var element = document.getElementById('0ec6187f-05cc-4886-84a7-b0c8f4addc6d');
     if (now.isBefore(dateThen)) {
-        element.innerHTML = 'Time left to leave: ' + dateThen.fromNow(true);
+        element.innerHTML = 'Time left until leave: ' + dateThen.fromNow(true);
+        element.classList.add('is-primary', 'is-light');
     } else {
         element.innerHTML = 'Already past the point.';
+        element.classList.add('is-danger');
     }
 </script>
 </body>
